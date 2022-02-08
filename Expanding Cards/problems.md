@@ -91,7 +91,7 @@
     ```
   
 - [x] [伪类`:nth-of-type(n)`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-of-type)
-  针对具有一组兄弟节点的标签，用n来筛选出一组兄弟节点的第一几节点。
+  针对具有一组兄弟节点的标签，用n来筛选出一组兄弟节点的第几节点。
   `.panel:nth-of-type(4)` 在每组兄弟节点点中选择第4个。
 
 **项目总结：**
