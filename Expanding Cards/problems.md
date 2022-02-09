@@ -1,21 +1,25 @@
 项目名称: Expanding Cards
+
 项目原址: https://github.com/bradtraversy/50projects50days
 
 
 >这个文件主要是记录我在本次项目中遇到的一些问题,以及这些问题的解决方式。
 
 - [x] **容器设置百分比高度无效**
+ 
  [![HuagcF.png](https://s4.ax1x.com/2022/02/06/HuagcF.png)](https://imgtu.com/i/HuagcF)
+ 
  将panel的高度设置为100%时无效,因为此元素的父级元素及其以上均未设置高度。
 
 - [x] **如何设置相同类名的前几个类的属性？**
-  1. :nth-child(n)    选择第n个
-  2. :nth-child(2n)   选择第偶数个
-  3. :nth-child(-n+6) 选择第1个到第6个
-  4. :nth-child(n+6)  选择从第6个开始，直到最后
-  5. :nth-child(-n+3):nth-child(-n+9) 选择第6个到第9个
+1. :nth-child(n)    选择第n个
+2. :nth-child(2n)   选择第偶数个
+3. :nth-child(-n+6) 选择第1个到第6个
+4. :nth-child(n+6)  选择从第6个开始，直到最后
+5. :nth-child(-n+3):nth-child(-n+9) 选择第6个到第9个
    
 - [x] **class属性有两个值，该如何写css选择器？**
+
     eg：class="panel active"
     1. .panel .active  => 匹配含panel下的含active的元素(中间有空格)
     2. .panel.active   => 匹配同时包含panel和active的元素 
@@ -59,7 +63,8 @@
         }
         ```
 
-      2. h3 的文字渐显效果：
+
+     2. h3 的文字渐显效果：
         问题：文字原本的宽度是较长的，但是父容器panel为被激活张开之前宽度是小于文字的宽度的。
           ![](https://media.giphy.com/media/ShTm5u711f4o81kwDT/giphy.gif)
         解决：在`visibility = 'visible'`之后添加定时器setTiemout，延迟0.5s才吧opacity变为1，再加上`transition: opacity 3s;`就可以达到预期的效果。
@@ -86,12 +91,15 @@
     ```
   
 - [x] [伪类`:nth-of-type(n)`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/:nth-of-type)
-  针对具有一组兄弟节点的标签，用n来筛选出一组兄弟节点的第一几节点。
+  针对具有一组兄弟节点的标签，用n来筛选出一组兄弟节点的第几节点。
   `.panel:nth-of-type(4)` 在每组兄弟节点点中选择第4个。
 
 **项目总结：**
+
   总体上还是完成了同样的效果，完成度接近100。
+  
   但是js的思路上是不一样的，作者的思路很清晰明了。我的就感觉有点复杂了。
+  
   在css上，文字h3部分作者实现的是点击前和点击后的效果分类显示，这个地方我没有想到，就笼统的认为。
 
   第一个小项目还是能够学到很多东西的，有时候喜欢这样的需要学什么就会去搞明白，而不是无脑一头从头看到尾教程，啥也记不住，又懒得动手实践。所以，在完成项目中去学习和实践吧！！
