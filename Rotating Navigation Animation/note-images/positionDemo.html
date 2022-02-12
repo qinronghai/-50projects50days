@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .warp1 {
+        height: 1800px;
+        width: 700px;
+        background-color: rgb(56, 173, 168);
+        justify-content: center;
+        display: flex;
+        align-items: center;
+    }
+    .warp2 {
+        height: 300px;
+        width: 400px;
+        background-color: rgb(122, 113, 113);
+        display: flex;
+        /* position: relative; */
+        position: sticky;
+        /* left: 50%; */
+        top: -1px;
+
+
+    }
+    .div {
+        height: 100px;
+        width: 100px;
+        margin-right: 10px;
+        background-color: #fff;
+    }
+
+    .div.first{
+        background-color: rgb(124, 52, 52);
+    }
+    .div.second {
+        background-color: rgb(172, 197, 62);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    .div.three {
+        background-color: rgb(177, 22, 22);
+    }
+</style>
+<body>
+    <div class="warp1">
+        <div class="warp2">
+            <div class="div first">1</div>
+            <div class="div second">2</div>
+            <div class="div three">3</div>
+        </div>
+    </div>
+</body>
+</html>
